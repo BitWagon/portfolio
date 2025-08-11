@@ -1,7 +1,33 @@
 'use client';
 import { Mail, Github, Linkedin } from 'lucide-react';
+import { useState } from 'react';
 
 export default function Home() {
+
+  const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const [status, setStatus] = useState('');
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('Sending...');
+
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    });
+
+    if (res.ok) {
+      setStatus('Message sent successfully!');
+      setForm({ name: '', email: '', message: '' });
+    } else {
+      setStatus('Failed to send message.');
+    }
+  }
   return (
     <main className="scroll-smooth">
       {/* Home Section */}
@@ -270,36 +296,46 @@ export default function Home() {
 `
       {/* Contact Section */}
       <section id="contact" className="py-20 px-6 bg-gray-900 text-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Contact Me</h2>
-          <p className="text-sm text-gray-300 mb-6">
-            Have a project or want to collaborate? Let’s connect!
-          </p>
-          <form className="grid gap-4 ">
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="border border-[#212d40] p-3 rounded-md text-black"
-            />
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="border border-[#212d40] p-3 rounded-md text-black"
-            />
-            <textarea
-              rows="4"
-              placeholder="Your Message"
-              className="border border-[#212d40] p-3 rounded-md text-black"
-            ></textarea>
-            <button
-              type="submit"
-              className="bg-[#00346B] text-white px-6 py-3 rounded-md hover:bg-[#123d6e] transition"
-            >
-              Send Message
-            </button>
-          </form>
-        </div>
-      </section>
+      <div className="max-w-3xl mx-auto text-center">
+        <h2 className="text-3xl font-bold mb-6">Contact Me</h2>
+        <p className="text-sm text-gray-300 mb-6">
+          Have a project or want to collaborate? Let’s connect!
+        </p>
+        <form className="grid gap-4" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            value={form.name}
+            onChange={handleChange}
+            placeholder="Your Name"
+            className="border border-[#212d40] p-3 rounded-md text-black"
+          />
+          <input
+            type="email"
+            name="email"
+            value={form.email}
+            onChange={handleChange}
+            placeholder="Your Email"
+            className="border border-[#212d40] p-3 rounded-md text-black"
+          />
+          <textarea
+            rows="4"
+            name="message"
+            value={form.message}
+            onChange={handleChange}
+            placeholder="Your Message"
+            className="border border-[#212d40] p-3 rounded-md text-black"
+          ></textarea>
+          <button
+            type="submit"
+            className="bg-[#00346B] text-white px-6 py-3 rounded-md hover:bg-[#123d6e] transition"
+          >
+            Send Message
+          </button>
+        </form>
+        {status && <p className="mt-4 text-sm">{status}</p>}
+      </div>
+    </section>
     </main>
   );
 }

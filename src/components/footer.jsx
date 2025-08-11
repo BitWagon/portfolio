@@ -1,4 +1,6 @@
-// components/Footer.jsx
+import Link from "next/link";
+import { Mail, MapPin, Github, Linkedin } from "lucide-react"; // lucide icons
+
 export default function Footer() {
   return (
     <footer className="bg-[#11151c] text-gray-300 px-6 py-10">
@@ -16,10 +18,18 @@ export default function Footer() {
         <div>
           <h2 className="text-xl font-bold text-white mb-4">Quick Links</h2>
           <ul className="space-y-2 text-sm">
-            <li className="hover:text-white cursor-pointer">Home</li>
-            <li className="hover:text-white cursor-pointer">About</li>
-            <li className="hover:text-white cursor-pointer">Project</li>
-            <li className="hover:text-white cursor-pointer">Contact</li>
+            <Link href="#home">
+              <li className="hover:text-white cursor-pointer">Home</li>
+            </Link>
+            <Link href="#about">
+              <li className="hover:text-white cursor-pointer">About</li>
+            </Link>
+            <Link href="#services">
+              <li className="hover:text-white cursor-pointer">Services</li>
+            </Link>
+            <Link href="#projects">
+              <li className="hover:text-white cursor-pointer">Projects</li>
+            </Link>
           </ul>
         </div>
 
@@ -27,17 +37,23 @@ export default function Footer() {
         <div>
           <h2 className="text-xl font-bold text-white mb-4">Get in Touch</h2>
           <ul className="space-y-2 text-sm">
-            <li className="flex items-center gap-2">
-              <span>📧</span>
-              abdulhamad373@email.com
+            <Link href='https://mail.google.com/mail/u/0/#inbox/FMfcgzQcpKbBxrlPPZNGscKxSxJVPZdJ'>
+            <li className="flex items-center gap-2 text-[#]">
+              <Mail size={16} />
+              abrahamrandhawa@gmail.com
             </li>
+            </Link>
             <li className="flex items-center gap-2">
-              <span>📍</span>
+              <MapPin size={16} />
               Fasilabad, Pakistan
             </li>
             <li className="flex items-center gap-4 pt-2 text-lg">
-              <a href="#" className="hover:text-white">🐱</a>
-              <a href="#" className="hover:text-white">🔗</a>
+              <a href="#" className="hover:text-white">
+                <Github size={20} />
+              </a>
+              <a href="#" className="hover:text-white">
+                <Linkedin size={20} />
+              </a>
             </li>
           </ul>
         </div>
