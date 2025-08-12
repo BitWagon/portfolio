@@ -1,5 +1,6 @@
 'use client';
-import { Mail, Github, Linkedin } from 'lucide-react';
+import { Mail, Github, Globe } from 'lucide-react';
+
 import { useState } from 'react';
 
 export default function Home() {
@@ -50,25 +51,25 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="bg-gray-900 p-4 rounded-full border border-cyan-400 hover:shadow-[0_0_20px_rgba(0,255,255,0.7)] transition"
+              className="bg-gray-900 p-4 rounded-full border border-white hover:shadow-[0_0_20px_#134074] transition"
             >
               <Github size={28} />
             </a>
             <a
-              href="https://www.linkedin.com/in/abrahamrandhawa/"
+              href="https://www.fiverr.com/abrahamrandhawa/buying?source=avatar_menu_profile"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="bg-gray-900 p-4 rounded-full border border-cyan-400 hover:shadow-[0_0_20px_rgba(0,255,255,0.7)] transition"
+              aria-label="Fiverr"
+              className="bg-gray-900 p-4 rounded-full border border-white hover:shadow-[0_0_20px_#134074] transition"
             >
-              <Linkedin size={28} />
+              <Globe size={28} /> {/* Placeholder for Fiverr */}
             </a>
             <a
               href="mailto:abrahamrandhawa@email.com"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Email"
-              className="bg-gray-900 p-4 rounded-full border border-cyan-400 hover:shadow-[0_0_20px_rgba(0,255,255,0.7)] transition"
+              className="bg-gray-900 p-4 rounded-full border border-white hover:shadow-[0_0_20px_#134074] transition"
             >
               <Mail size={28} />
             </a>
@@ -78,13 +79,13 @@ export default function Home() {
           <div className="flex justify-center gap-4">
             <a
               href="#projects"
-              className="bg-cyan-500 text-white px-6 py-3 rounded-md font-medium hover:bg-cyan-400 transition"
+              className="bg-[#00346B] text-white px-6 py-3 rounded-md font-medium hover:bg-[#134074]  transition font-sans"
             >
               View My Work
             </a>
             <a
               href="#contact"
-              className="border border-cyan-500 text-cyan-500 px-6 py-3 rounded-md font-medium hover:bg-cyan-500 hover:text-white transition"
+              className="border border-gray-600 text-white  px-6 py-3 rounded-md font-medium hover:bg-black transition font-sans"
             >
               Hire Me
             </a>
@@ -101,20 +102,20 @@ export default function Home() {
       <img
         src="/about-image.png" // replace with your image path
         alt="About Me"
-        className="w-64 h-64 object-cover rounded-full border-4 border-cyan-400 shadow-[0_0_40px_rgba(0,255,255,0.6)]"
+        className="w-64 h-64 object-cover rounded-full border-4 border-white hover:shadow-[0_0_20px_rgba(0,80,157,0.6)]"
       />
     </div>
 
     {/* Right Content */}
     <div>
       <h2 className="text-4xl font-bold mb-6">
-        About <span className="text-cyan-400">Me</span>
+        About <span className="text-[#00346B]">Me</span>
       </h2>
       <p className="text-lg mb-4 text-gray-300">
         Hello! I’m <span className="font-bold">Abdul Hamad</span>, a passionate web developer with a love for building intuitive and responsive digital experiences. I specialize in crafting dynamic web apps using 
-        <span className="text-cyan-400 font-semibold"> JavaScript</span>, 
-        <span className="text-cyan-400 font-semibold"> React</span>, and 
-        <span className="text-cyan-400 font-semibold"> Next.js</span>. My mission is to deliver elegant and efficient solutions that solve real-world problems.
+        <span className="text-[#0d3b66] font-semibold"> JavaScript</span>, 
+        <span className="text-[#0d3b66] font-semibold"> React</span>, and 
+        <span className="text-[#0d3b66] font-semibold"> Next.js</span>. My mission is to deliver elegant and efficient solutions that solve real-world problems.
       </p>
       <p className="text-lg mb-4 text-gray-300">
         I started coding with a dream to turn ideas into reality. Over time, I’ve learned the power of clean design, scalable code, and great user experience. Whether it’s a small business website or a full-stack SaaS app, I’m all about attention to detail and continual improvement. Outside of coding, I enjoy learning new technologies, contributing to open-source, and staying updated with the latest in web development.
