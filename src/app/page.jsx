@@ -100,7 +100,7 @@ export default function Home() {
     {/* Left Image */}
     <div className="flex-shrink-0">
       <img
-        src="/about-image.png" // replace with your image path
+        src="/images/ab.jpg" // replace with your image path
         alt="About Me"
         className="w-64 h-64 object-cover rounded-full border-4 border-white hover:shadow-[0_0_20px_rgba(0,80,157,0.6)]"
       />
@@ -113,19 +113,19 @@ export default function Home() {
       </h2>
       <p className="text-lg mb-4 text-gray-300">
         Hello! I’m <span className="font-bold">Abdul Hamad</span>, a passionate web developer with a love for building intuitive and responsive digital experiences. I specialize in crafting dynamic web apps using 
-        <span className="text-[#0d3b66] font-semibold"> JavaScript</span>, 
-        <span className="text-[#0d3b66] font-semibold"> React</span>, and 
-        <span className="text-[#0d3b66] font-semibold"> Next.js</span>. My mission is to deliver elegant and efficient solutions that solve real-world problems.
+        <span className="text-[#00346B] font-semibold"> JavaScript</span>, 
+        <span className="text-[#00346B] font-semibold"> React</span>, and 
+        <span className="text-[#00346B] font-semibold"> Next.js</span>. My mission is to deliver elegant and efficient solutions that solve real-world problems.
       </p>
       <p className="text-lg mb-4 text-gray-300">
         I started coding with a dream to turn ideas into reality. Over time, I’ve learned the power of clean design, scalable code, and great user experience. Whether it’s a small business website or a full-stack SaaS app, I’m all about attention to detail and continual improvement. Outside of coding, I enjoy learning new technologies, contributing to open-source, and staying updated with the latest in web development.
       </p>
       <p className="text-lg text-gray-300">
         I began my web development journey on YouTube around a year ago. During this time, I learned the fundamentals of 
-        <span className="text-cyan-400 font-semibold"> HTML</span>, 
-        <span className="text-cyan-400 font-semibold"> CSS</span>, 
-        <span className="text-cyan-400 font-semibold"> JavaScript</span>, and responsive web design. I also created logic-based projects such as a calculator, a to-do app, and a rock-paper-scissors game using 
-        <span className="text-cyan-400 font-semibold"> Math.random</span>.
+        <span className="text-[#00346B] font-semibold"> HTML</span>, 
+        <span className="text-[#00346B] font-semibold"> CSS</span>, 
+        <span className="text-[#00346B] font-semibold"> JavaScript</span>, and responsive web design. I also created logic-based projects such as a calculator, a to-do app, and a rock-paper-scissors game using 
+        <span className="text-[#00346B] font-semibold"> Math.random</span>.
       </p>
     </div>
   </div>
@@ -134,8 +134,8 @@ export default function Home() {
 
           {/* Services Section */}
           <section id="services" className="py-20 px-6 bg-[#212d40] text-white">
-            <div className="max-w-5xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-10">My Services</h2>
+            <div className="max-w-5xl mx-auto text-center ">
+              <h2 className="text-3xl font-bold mb-10 font-sans">My Services</h2>
               <div className="grid md:grid-cols-3 gap-8">
 
               {/* Service 1 */}
@@ -200,7 +200,7 @@ export default function Home() {
             {/* Project Card 1 */}
             <div className="bg-[#212d40] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition">
               <img
-                src="/projects/ecommerce.jpg"
+                src="/images/pic.png"
                 alt="Business Manager"
                 className="w-full h-40 object-cover"
               />
@@ -231,7 +231,7 @@ export default function Home() {
             {/* Project Card 2 */}
             <div className="bg-[#212d40] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition">
               <img
-                src="/projects/taskmanager.jpg"
+                src="/images/pick.png"
                 alt="Own Bussines"
                 className="w-full h-40 object-cover"
               />
@@ -262,7 +262,7 @@ export default function Home() {
             {/* Project Card 3 */}
             <div className="bg-[#212d40] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition">
               <img
-                src="/projects/saasapp.jpg"
+                src="/images/pi.png"
                 alt="Solo"
                 className="w-full h-40 object-cover"
               />
